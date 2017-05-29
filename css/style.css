@@ -1,0 +1,248 @@
+* {
+    text-decoration: none;
+    font-family: '微軟正黑體', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+}
+
+header {
+    margin: 40px;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 55%;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+}
+
+.img-responsive img {
+    width: 100%;
+}
+
+header #logo {
+    height: 8vw;
+    max-height: 80px;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+header::after, footer::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header ul {
+	visibility: hidden;
+    padding: 0px;
+    margin-left: 5vw;
+}
+
+header ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+header li a {
+    color: #222;
+    display: block;
+}
+
+header li a:hover {
+  color: #999;
+}
+
+header input {
+    border-radius: 8px;
+}
+
+header #search-box {
+	visibility: hidden;
+    font-size: 13px;
+    color: #555;
+    width: 120px;
+    background: #8EACB4 url('../img/search.gif') no-repeat 4px 4px;
+    padding: 4px 4px 4px 24px;
+    border: 0px;
+}
+
+/**/
+.dis-hid {
+  visibility: hidden;
+}
+.dis-vis {
+  visibility: visible;
+}
+@media only screen and (min-width: 679px) {
+  .bar {
+    visibility: hidden;
+  }
+  .hamburger-menu ul, header #search-box {
+    visibility: visible;
+  }
+}
+
+.hamburger-menu {
+  margin: auto;
+  
+  cursor: pointer;
+}
+
+.bar,
+.bar:after,
+.bar:before {
+  width: 40px;
+  height: 7px;
+}
+
+.bar {
+  position: absolute;
+  right: 20px;
+  transform: translateY(25px);
+  background: white;
+  transition: all 0ms 300ms;
+}
+.bar.animate {
+  background: rgba(255, 255, 255, 0);
+}
+
+.bar:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  background: white;
+  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  background: white;
+  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar.animate:after {
+  top: 0;
+  transform: rotate(45deg);
+  transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar.animate:before {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu nav ul{
+  display: inline;
+}
+/**/
+
+main {
+  padding: 40px;
+}
+
+main #product-box {
+
+}
+
+main img {
+  display: inline-block;
+  width: 132px;
+  margin: 0 60px;
+}
+
+footer {
+  background-color: #333;
+}
+
+footer ul {
+  display: inline-block;
+  color: #ddd;
+}
+
+footer li {
+  list-style: none;
+}
+
+footer input {
+
+}
+
+footer ul button {
+  margin-left: 4px;
+  padding: 2px;
+  height: 21px;
+}
+
+footer ul img {
+  display: inline-block;
+  max-width: 32px;
+}
+
+footer ul #icon-bar {
+  content: "";
+  display: block;
+  clear: both;
+  padding-top: 12px;
+}
+
+footer .depart-line {
+    content: "";
+    display: block;
+    clear: both;
+    height: 1px;
+    background: #898989;
+    margin: 14px 0;
+}
+
+footer #copyright{
+  width: 300px;
+}
+
+footer #flogo {
+  max-width: 240px;
+  position: absolute;
+  left: 43%;
+}
+
+footer #country {
+
+}
+
+footer #country img {
+  display: inline-block;
+  max-width: 40px;
+}
+
+footer #country p {
+  margin: 0px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 25px;
+  display: inline-block;
+  color: #ddd;
+  font-size: 25px;
+}
